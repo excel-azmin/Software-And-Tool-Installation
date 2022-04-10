@@ -1,0 +1,19 @@
+1. Anaconda Navigator is a QT-based GUI.
+
+$ sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+
+2. Download the Anaconda installation script with your web browser or wget
+
+$ wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+
+3. This step is optional, but it is recommended to verify the data integrity of the script.
+
+$ sha256sum /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+
+4. Run the script to start the installation process:
+
+$ bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+
+5. This will add the command-line tool conda to your system’s PATH.
+
+$ source ~/.bashrc
