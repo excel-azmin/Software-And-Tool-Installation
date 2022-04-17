@@ -1,0 +1,17 @@
+Step 1: Install Java JDK on Ubuntu 20.04
+
+$ sudo apt install openjdk-11-jdk
+
+Step 2: Add android-studio repository
+
+$ sudo add-apt-repository ppa:maarten-fonville/android-studio
+
+Step 3: Update the apt-cache
+
+$ sudo apt update
+
+Step 4: Install Android Studio
+
+$ sudo apt install android-studio
+
+Step 5: Launch Android Studio
