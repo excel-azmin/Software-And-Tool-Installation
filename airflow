@@ -1,0 +1,17 @@
+cd Desktop 
+mkdir etl
+cd etl
+nano docker-compose.yml  {Past the yml file from airflow official sites}
+# save and 
+nano .env
+AIRFLOW_UID=50000
+
+# save and exit
+
+docker-compose up airflow-int
+
+docker-compose up
+
+#visit http://localhost:8080/
+
+# login user name : airflow password : airflow
