@@ -17,3 +17,15 @@ $ bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh
 5. This will add the command-line tool conda to your system’s PATH.
 
 $ source ~/.bashrc
+
+start conda
+
+$ anaconda-navigator
+
+Updating Anaconda
+
+$ conda update --all
+
+Uninstalling Anaconda
+
+$ rm -rf ~/anaconda3 ~/.condarc ~/.conda ~/.continuum
