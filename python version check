@@ -1,0 +1,8 @@
+#Check available versions
+ls /usr/bin/python*
+#Change the used version 3.5 or 3.7 etc
+alias python='/usr/bin/python3.x'
+#do this other thing
+. ~/.bashrc
+#Check version 
+python --version
