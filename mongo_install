@@ -13,3 +13,47 @@ sudo apt-get install -y mongodb-org=4.4.11 mongodb-org-server=4.4.11 mongodb-org
 sudo systemctl start mongod
 
 sudo systemctl status mongod
+
+
+------------------------------------6.0----------------------------------
+
+
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+sudo apt-get install gnupg
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-database hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-mongosh hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+
+ps --no-headers -o comm 1
+
+sudo systemctl start mongod
+
+# If you receive an error similar to the following when starting mongod
+sudo systemctl daemon-reload
+
+
+# Verify that MongoDB has started successfully.
+
+sudo systemctl status mongod
+sudo systemctl enable mongod
+sudo systemctl stop mongod
+sudo systemctl restart mongod
+
+
+
+mongosh
+
+
+# Refrences 
+
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
+
