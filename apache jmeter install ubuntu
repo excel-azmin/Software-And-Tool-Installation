@@ -1,0 +1,41 @@
+sudo apt update
+sudo apt install jmeter
+wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.5.zip
+unzip apache-jmeter-5.5.zip
+mv apache-jmeter-5.5 jmeter
+sudo mv jmeter /opt
+echo 'export PATH="$PATH:/opt/jmeter/bin"' >> ~/.bashrc
+source ~/.bashrc
+jmeter
+
+
+# Create Desktop and Application Shortcut
+
+
+nano ~/Desktop/Jmeter.desktop
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Apache-Jmeter
+Comment=Testing
+Exec=/opt/jmeter/bin/./jmeter.sh
+Icon=/opt/jmeter/docs/images/jmeter_square.png
+Terminal=false
+StartupNotify=false
+
+
+chmod 4775 ~/Desktop/Jmeter.desktop
+sudo cp ~/Desktop/Jmeter.desktop /usr/share/applications/
+
+
+# Uninstall Jmeter from Ubuntu 20.04
+
+
+sudo apt autoremove --purge jmeter
+sudo rm /opt/jmeter
+sudo rm /usr/share/applications/Jmeter.desktop ~/Desktop/Jmeter.desktop
+
+
+
+
