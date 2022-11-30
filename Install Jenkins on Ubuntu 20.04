@@ -11,3 +11,34 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 cddfba4379ff43b5bf2368c05c03a65b
 http://localhost:8080/
 
+
+
+sudo systemctl start jenkins 
+sudo systemctl stop jenkins 
+sudo systemctl restart jenkins 
+sudo systemctl status jenkins 
+
+
+
+https://www.baeldung.com/linux/remove-jenkins
+
+
+sudo yum -y remove jenkins
+sudo apt-get remove --purge jenkins
+ls /var/lib/jenkins
+rm -rf /var/lib/jenkins
+
+$ sudo getent passwd | grep jenkins
+jenkins:x:978:974:Jenkins Automation Server:/var/lib/jenkins:/bin/false
+$ sudo getent group | grep jenkins
+jenkins:x:974:
+$ sudo userdel jenkins
+$ sudo getent passwd | grep jenkins
+$ sudo getent group | grep jenkins
+
+$ ps -ef | grep jenkins
+ubuntu 14433 8171 32 14:54 pts/0 00:00:43 java -jar jenkins.war
+ubuntu 14824 14618 0 14:57 pts/1 00:00:00 grep --color=auto jenkins
+
+rm -rf /root/.jenkins/
+
