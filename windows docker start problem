@@ -1,0 +1,3 @@
+Open cmd as administrator
+
+Launch command: "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchDaemon
