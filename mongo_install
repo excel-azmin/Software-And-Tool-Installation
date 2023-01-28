@@ -1,3 +1,5 @@
+------------------------------------4.4----------------------------------
+
 sudo service mongod stop 
 
 sudo apt purge mongo*
@@ -13,6 +15,17 @@ sudo apt-get install -y mongodb-org=4.4.11 mongodb-org-server=4.4.11 mongodb-org
 sudo systemctl start mongod
 
 sudo systemctl status mongod
+
+------------------------------------Mongo DB Compas----------------------------------
+
+https://www.mongodb.com/try/download/shell
+
+
+
+
+cd Downloads
+
+sudo apt install ./mongodb-compass_*_amd64.deb
 
 
 ------------------------------------6.0----------------------------------
