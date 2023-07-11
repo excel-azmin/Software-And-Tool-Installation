@@ -13,5 +13,5 @@ sudo vmware-modconfig --console --install-all
 # Uninstall or remove
 
 ```
-sudo vmware-installer -u vmware-player
+sudo  vmware-installer -u vmware-workstation
 ```
