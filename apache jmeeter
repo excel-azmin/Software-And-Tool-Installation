@@ -1,0 +1,82 @@
+The latest version while doing this tutorial was version 5.5, however, you can get the latest one from the official download page JMeter, if it is different in your case.
+
+Copy the Link of the Zip file and paste it in front of wget command tool.
+
+wget paste-link
+
+For example:
+
+wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.5.zip
+Download Jmeter on Ubuntu 22.04
+5. Setup JMeter on Ubuntu 22.04 LTS
+Now, extract the downloaded file and for convenience, you can change the name of the extracted folder.
+
+ls
+Check the downloaded zip file and replace the version of the file in the below-given commands:
+
+unzip apache-jmeter-5.5.zip
+Change the folder name:
+
+mv apache-jmeter-5.5 jmeter
+Move it to somewhere safe such as /opt directory
+
+sudo mv jmeter /opt
+6. Add Jmeter to the system path
+To easily access the Jmeter commands line tools without switching to its directory again and again, simply add its folder to your system path
+
+echo 'export PATH="$PATH:/opt/jmeter/bin"' >> ~/.bashrc
+source ~/.bashrc
+Now, we can start it using a command i.e:
+
+jmeter
+7. Create Desktop and Application Shortcut
+Well, those who are regular users of Apache Jmeter, can create a Desktop as well as Application launcher shortcut to readily access this testing application.
+
+Create a Desktop shortcut file
+
+nano ~/Desktop/Jmeter.desktop
+Paste the following lines:
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Apache-Jmeter
+Comment=Testing
+Exec=/opt/jmeter/bin/./jmeter.sh
+Icon=/opt/jmeter/docs/images/jmeter_square.png
+Terminal=false
+StartupNotify=false
+Save the file by pressing Ctrl+O, hitting the Enter key, and then Ctrl+X to exit the file.
+
+Change file permission:
+
+chmod 4775 ~/Desktop/Jmeter.desktop
+Allow launching of file:
+
+You will have a Shortcut file on your Ubuntu Dekstop, simply right-click on the file and select the “Allow launching” option.
+
+Allow launching testing stress load
+8. Run Apache Jmeter
+After creating the Jmeter, we can launch it directly using its Desktop shortcut. Just double-click that and you will have this Stress testing application on your system launched to start working.
+
+Install latest version Jmeter on Ubuntu 22.04
+Also, add the shortcut in your Application launcher:
+
+sudo cp ~/Desktop/Jmeter.desktop /usr/share/applications/
+Launch Jmeter
+9. How to update
+Well, if you have installed the Jmeter using the APT repository and there is some update available then run:
+
+sudo apt update && sudo apt upgrade
+Whereas, the users who have opted for the second method to get Jmeter in Ubuntu need to just follow the Step 4 and 5 of this tutorial. Again in which they have to download the latest version of the Jmeter manually and then extract it in the /opt folder.
+
+10. Uninstall Jmeter from Ubuntu 22.04
+To completely remove the Jmeter from the Ubuntu 22.04 use the given command depending on the method you have used to install it.
+
+For APT:
+
+sudo apt autoremove --purge jmeter
+For the Manual method:
+
+sudo rm /opt/jmeter
+sudo rm /usr/share/applications/Jmeter.desktop ~/Desktop/Jmeter.desktop
